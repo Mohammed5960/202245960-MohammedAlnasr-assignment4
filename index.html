@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Alnasr | Portfolio Assignment 4</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo">Mohammed Alnasr</h1>
 
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#github">GitHub</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h2>Welcome to My Portfolio</h2>
+            <p>I am a Computer Science student interested in web development, problem-solving, and building interactive web applications.</p>
+
+            <a href="#projects" class="cta-btn">View My Work</a>
+            <p id="siteTimer" class="site-timer">You have been on this site for 0 seconds.</p>
+
+            <div class="visitor-box">
+                <label for="visitorName">Enter your name:</label>
+                <div class="visitor-controls">
+                    <input type="text" id="visitorName" placeholder="Type your name">
+                    <button id="saveNameBtn">Save Name</button>
+                    <button id="clearNameBtn" class="secondary-btn">Clear</button>
+                </div>
+                <p id="greetingMessage" class="status-message"></p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Hello! I'm Mohammed, a Computer Science student passionate about web development and technology.</p>
+            <p>I enjoy creating responsive and interactive websites using HTML, CSS, and JavaScript.</p>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <p class="section-intro">
+                Use the search box, category filter, and sorting menu to explore my projects.
+            </p>
+
+            <div class="controls-grid">
+                <input
+                    type="text"
+                    id="projectSearch"
+                    placeholder="Search projects..."
+                    aria-label="Search projects"
+                >
+
+                <select id="categoryFilter" aria-label="Filter projects by category">
+                    <option value="all">All Categories</option>
+                    <option value="web">Web</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="form">Form</option>
+                </select>
+
+                <select id="sortProjects" aria-label="Sort projects">
+                    <option value="default">Sort By</option>
+                    <option value="az">Name (A-Z)</option>
+                    <option value="za">Name (Z-A)</option>
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                </select>
+            </div>
+
+            <p id="searchMessage" class="status-message"></p>
+
+            <div id="projectsContainer" class="cards-grid"></div>
+        </section>
+
+        <section id="github" class="section">
+            <h2>GitHub Repositories</h2>
+            <p class="section-intro">
+                This section uses the GitHub API to load my public repositories dynamically.
+            </p>
+
+            <div id="repoStatus" class="status-box">Loading repositories...</div>
+            <div id="repoContainer" class="cards-grid"></div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <p class="section-intro">
+                Fill in your name, a valid email address, and a message of at least 10 characters, then click "Send Message".
+            </p>
+
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Your Name">
+                    <small class="field-error" id="nameError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="Your Email">
+                    <small class="field-error" id="emailError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" placeholder="Your Message"></textarea>
+                    <small class="field-error" id="messageError"></small>
+                </div>
+
+                <button type="submit">Send Message</button>
+                <p id="formMessage" class="status-message"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Mohammed Alnasr. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
