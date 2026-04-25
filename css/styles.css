@@ -1,1 +1,369 @@
+html {
+    scroll-behavior: smooth;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #222;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f4c542;
+}
+
+#themeToggle {
+    padding: 8px 12px;
+    border: none;
+    background: white;
+    color: #222;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+}
+
+#themeToggle:hover {
+    opacity: 0.85;
+}
+
+.hero {
+    background: linear-gradient(135deg, #1f2937, #374151);
+    color: white;
+    padding: 70px 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero h2 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 18px;
+    background: #f4c542;
+    color: #222;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+    background: #ffd95a;
+    transform: translateY(-2px);
+}
+
+.site-timer {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #f4c542;
+}
+
+.visitor-box {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.visitor-box label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.visitor-controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.section {
+    padding: 70px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section h2 {
+    margin-bottom: 10px;
+}
+
+.section-intro {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.controls-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+input,
+textarea,
+select,
+button {
+    padding: 11px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font: inherit;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+button {
+    background: #222;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #444;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: #6b7280;
+}
+
+.secondary-btn:hover {
+    background: #4b5563;
+}
+
+.status-message {
+    min-height: 24px;
+    margin-top: 10px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.status-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.status-box {
+    margin-bottom: 20px;
+    padding: 14px;
+    border-radius: 8px;
+    background: #e5e7eb;
+    color: #222;
+    font-weight: bold;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.project-card,
+.repo-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover,
+.repo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.14);
+}
+
+.card-tag,
+.card-year,
+.repo-language,
+.repo-stars {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 8px;
+    padding: 4px 8px;
+    font-size: 13px;
+    border-radius: 20px;
+    background: #e5e7eb;
+}
+
+.repo-card a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #1d4ed8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.repo-card a:hover {
+    text-decoration: underline;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.field-error {
+    display: block;
+    min-height: 18px;
+    margin-top: 6px;
+    color: #c62828;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    margin-top: 30px;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .navbar,
+.dark-mode footer {
+    background: #000;
+}
+
+.dark-mode .section-intro {
+    color: #ccc;
+}
+
+.dark-mode .project-card,
+.dark-mode .repo-card,
+.dark-mode .visitor-box {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+    background: #1e1e1e;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+    color: #aaa;
+}
+
+.dark-mode .status-box,
+.dark-mode .card-tag,
+.dark-mode .card-year,
+.dark-mode .repo-language,
+.dark-mode .repo-stars {
+    background: #2f2f2f;
+    color: white;
+}
+
+.dark-mode #themeToggle {
+    background: white;
+    color: #222;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .controls-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .visitor-controls {
+        flex-direction: column;
+    }
+
+    .section {
+        padding: 40px 15px;
+    }
+}
