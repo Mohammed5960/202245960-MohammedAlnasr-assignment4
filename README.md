@@ -10,7 +10,7 @@ The goal of this project is to demonstrate my ability to build an interactive we
 ## Live Demo
 The website is deployed using GitHub Pages:
 
-https://yourusername.github.io/id-name-assignment4/
+https://Mohammed5960.github.io/202245960-MohammedAlnasr-assignment4/
 
 ---
 
