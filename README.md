@@ -91,7 +91,7 @@ AI tools (ChatGPT) were used to:
 - Suggest improvements for validation and UI
 
 Detailed information is available in:
-docs/ai-usage-report.md
+`docs/ai-usage-report.md`
 
 
 ---
